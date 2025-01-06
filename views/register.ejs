@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class=" card shadow col-md-6">
+                <h3 class="text-center mb-4 mt-2">Registration Form</h3>
+                <form action="/addstudents" method="post">
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullname" name="fullname"
+                            placeholder="Enter Your Full Name">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                            placeholder="Enter your password">
+                    </div>
+
+                    <!-- Gender (Radio Buttons) -->
+                    <div class="mb-3">
+                        <label class="form-label">Gender</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                            <label class="form-check-label" for="other">Other</label>
+                        </div>
+                    </div>
+
+                    <!-- Hobbies (Checkboxes) -->
+                    <div class="mb-3">
+                        <label class="form-label">Hobbies</label><br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="reading" name="hobbies[]"
+                                value="reading">
+                            <label class="form-check-label" for="reading">Reading</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="travelling" name="hobbies[]"
+                                value="travelling">
+                            <label class="form-check-label" for="travelling">TraveLling</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="sports" name="hobbies[]" value="sports">
+                            <label class="form-check-label" for="sports">Sports</label>
+                        </div>
+                    </div>
+
+                    <!-- Country (Dropdown) -->
+                    <div class="mb-3">
+                        <label for="country" class="form-label">Country</label>
+                        <select class="form-select" id="country" name="country">
+                            <option selected>Select Your Country...</option>
+                            <option value="india" name="india">India</option>
+                            <option value="usa" name="usa">USA</option>
+                            <option value="uk" name="uk">UK</option>
+                        </select>
+                    </div>
+
+                    <div class="d-grid mb-2">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
