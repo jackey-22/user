@@ -89,7 +89,7 @@ async function editstudent(req, res, next) {
   res.json(editstudent);
 }
 
-async function deleteUser(req, res, next) {
+async function deleteStudent(req, res, next) {
   const { deleteId } = req.body;
   console.log(deleteId);
   // const student = await studentModel.findOne({ _id: deleteId });
@@ -97,12 +97,11 @@ async function deleteUser(req, res, next) {
   // student.isActive = false;
   // await student.save();
 
-  await StudentModel.deleteOne({ _id: deleteId });
+  await studentModel.deleteOne({ _id: deleteId });
 
   res.json({ success: true });
 }
 
-app.post("/deleteStudent", deleteStudent);
 
 function setSweetalert(req, res) {
   res.locals.sweetalert = req.session.sweetalert ?? null;
